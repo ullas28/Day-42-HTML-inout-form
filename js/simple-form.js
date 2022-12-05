@@ -109,3 +109,30 @@
           emailError.emailContent = "";
       else emailError.emailContent = "Email is Incorrect";
   });
+
+  /**
+ * To validate the mobile field using the REGEX expression
+ */
+
+// When the user starts to type something inside the number field
+var myInput1 = document.getElementById("tel");
+myInput1.onkeyup = function() {
+    // Validate numbers
+    var numbers = /[0-9]/g;
+    if(myInput1.value.match(numbers)) {  
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+    // Validate space
+    var space = /[\s]/g;
+    if(myInput1.value.match(space)) {  
+        letter.classList.remove("invalid");
+        letter.classList.add("valid");
+    } else {
+        letter.classList.remove("valid");
+        letter.classList.add("invalid");
+    }
+}
