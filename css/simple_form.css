@@ -84,7 +84,6 @@ error-output {
 .invalid {
     color: red;
 }
-
   
 .invalid:before {
     position: relative;
