@@ -30,14 +30,14 @@
      else textError.textContent = "Name is Incorrect";
  });
  
- // const password = document.querySelector('#password');
- // const passwordError = document.querySelector('.pwd-error');
- // password.addEventListener('input',function(){
- //     let nameRegex = RegExp("[A-Za-z0-9!@#&()–{}:;',?/*~$^+=<>]{8,}");
- //     if(nameRegex.test(password.value))
- //         passwordError.textContent = "";
- //     else passwordError.textContent = "Password is Incorrect";
- // });
+ const password = document.querySelector('#password');
+ const passwordError = document.querySelector('.pwd-error');
+ password.addEventListener('input',function(){
+     let nameRegex = RegExp("[A-Za-z0-9!@#&()–{}:;',?/*~$^+=<>]{8,}");
+     if(nameRegex.test(password.value))
+         passwordError.textContent = "";
+     else passwordError.textContent = "Password is Incorrect";
+ });
 
  var myInput = document.getElementById("psw");
  var letter = document.getElementById("letter");
