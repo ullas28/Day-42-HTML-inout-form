@@ -96,3 +96,16 @@
          length.classList.add("invalid");
      }
  }
+
+ /**
+ * To validate the email field using the REGEX expression
+ */
+
+  const email = document.querySelector('#email');
+  const emailError = document.querySelector('.email-error');
+  text.addEventListener('input', function() {
+      let emailRegex = RegExp("^[A-Za-z0-9!#$%&*+\\\\=?`{|}~^-]+(?:\\.[A-Za-z!#$%&*+\\\\=?`{|}~^-]+)*@(?:([0-9-]{1}|[a-zA-Z]{3,5})\\.)+[a-zA-Z]{2,3}$");
+      if(emailRegex.test(email.value))
+          emailError.emailContent = "";
+      else emailError.emailContent = "Email is Incorrect";
+  });
